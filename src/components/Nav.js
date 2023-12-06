@@ -5,7 +5,7 @@ const Nav = () => {
         <nav>
             {/*logo for little Lemon */}
             <a href='/'>
-                <img src='src/littleLemon.png' alt= 'little lemon logo'/>
+                <img src='../images/littleLemon.png' alt= 'little lemon logo'/>
             </a>
             {/* mobile navbar */}
             <ul>

@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useState} from 'react';
 
 const Nav = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
+    
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen)
+    }
     return (
-        <nav>
+        <nav className={'navbar ${menuOpen ? "open" : ""}'}> 
             {/*logo for little Lemon */}
-            <a href='/'>
+            <a href='/' className='logo'>
                 <img src='../images/littleLemon.png' alt= 'little lemon logo'/>
             </a>
+            
             {/* mobile navbar */}
-            <ul>
+            <div className='menu-icon' onClick={toggleMenu}>
                 <div className='bar'></div>
                 <div className='bar'></div>
                 <div className='bar'></div>
-            </ul>
+            </div>
+            
             {/* desktop navbar */}
-            <ul>
+            <ul className={'nav-links ${menuOpen ? "visible" : ""}'}>
                <li>
                 <a href='/'>Home</a>
                </li>

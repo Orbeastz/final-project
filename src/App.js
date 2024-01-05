@@ -1,16 +1,21 @@
 import React from 'react';
 import './App.css'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Landing from './components/Landingpage';
 
 function App() {
   return (
-    <>
-    <Header/>
-    <Nav/>
-    <Footer/>
-    </>
+    <BrowserRouter>
+    <Routes>
+    <Route index element={<Landing/>} />
+    <Route path="Header" element={<Header/>} />
+    <Route path="Nav" element={<Nav/>} />
+    <Route path="Footer" element={<Footer/>} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 

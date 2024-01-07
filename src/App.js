@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Landing from './components/Landingpage';
+import BookingForm from './components/BookingForm'
 
 function App() {
   return (
